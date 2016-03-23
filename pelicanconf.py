@@ -16,7 +16,7 @@ GOOGLE_ANALYTICS = "UA-65628430-4"
 # GITHUB_USER = 'channprj'
 
 ### THEME SETTING
-THEME = 'theme/peliwiki'
+THEME = 'theme/til'
 DIRECT_TEMPLATES = ('index', 'search', 'archives', 'categories','tags')
 
 BOOTSTRAP_NAVBAR_INVERSE = True
