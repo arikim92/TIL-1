@@ -43,14 +43,14 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-         ('Blog', 'http://blog.chann.kr'),
+         ('Blog', 'https://blog.chann.kr'),
 )
 
 # Social widget
 SOCIAL = (
 	('Resume', 'https://chann.kr'),
-	('Github', 'https://github.com/channprj'),
-	('Twitter', 'https://twitter.com/chann_kr'),
+	('Github', 'https://github.com/channprj/TIL'),
+	('Twitter', 'https://twitter.com/channprj'),
 	('Facebook', 'https://fb.com/channprj'),
 )
 
