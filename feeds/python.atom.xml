@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/python.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-03-11T14:00:00+09:00</updated><entry><title>파이썬 코딩 컨벤션</title><link href="https://til.chann.kr/python/python-coding-convention" rel="alternate"></link><updated>2016-03-11T14:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-03-11:python/python-coding-convention</id><summary type="html">&lt;!--Summary: --&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img alt="Imgur" src="http://i.imgur.com/P58yvJI.png" /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img alt="Imgur" src="https://i.imgur.com/P58yvJI.png" /&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Coding_conventions"&gt;코딩 컨벤션(Coding convention)&lt;/a&gt;이란 읽고, 관리하기 쉬운 코드를 작성하기 위한 일종의 코딩 스타일 규약(약속)임.&lt;/p&gt;
 &lt;p&gt;대부분의 언어는 대표적인 코딩 컨벤션을 가지고 있고, 일반적으로는 그러한 암묵적인 표준을 따르게 됨. 하지만 프로젝트별, 회사별, 기타 단체마다 각자 다른 규칙을 가짐. 단체에서는 아무리 작은 프로젝트라 하더라도 유지 보수 및 추가 개발 등의 관리를 해야 하기 때문에 코딩 스타일 규약은 반드시 필요.&lt;/p&gt;
 &lt;p&gt;완벽한 코딩 컨벤션은 없음. 효율성이나 편의성이 확실히 증명되어 채택된 방식이 있을 수도 있지만 대개 취향의 차이임. 그러나 각 언어별 '존잘'~~(존나 잘하는)~~ 분들이 계신데, 대체로 그 분들의 영향력이 많이 끼침. 취향의 차이라서 그런지 서로 많이들 싸우기도 하는데, 대표적인 예로는 아래와 같음.&lt;/p&gt;
