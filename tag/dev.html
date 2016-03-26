@@ -69,9 +69,7 @@ Today I Learned			</a>
                 <h2><a href="https://til.chann.kr/ci/travis-ci-setting-on-til">TIL에 Travis-CI 적용하기</a></h2>
                 <div class="summary"><!--Summary: -->
 
-<blockquote>
-<p>WIP</p>
-</blockquote>
+<p>TIL의 Generator 저장소와 Github Pages 저장소를 분리해서 운영하다가 지저분함을 느끼고 하나로 합침. 내 Travis-CI의 YAML 파일은 아래와 같음.</p>
 <div class="highlight"><pre><span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">python</span>
 
 <span class="l-Scalar-Plain">python</span><span class="p-Indicator">:</span>
@@ -88,11 +86,7 @@ Today I Learned			</a>
 <span class="l-Scalar-Plain">before_install</span><span class="p-Indicator">:</span>
 <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">git config --global user.email &quot;{your-email}&quot;</span>
 <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">git config --global user.name &quot;{your-id}&quot;</span>
-<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">git clone -b generator --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git generator</span>
-<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">cd generator</span>
-
-<span class="l-Scalar-Plain">install</span><span class="p-Indicator">:</span>
-<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">pip install -r ...</span></pre></div></!--summary:>
+<span class="p-Indicator">-</span> <span class="l-Scalar-Plain">git clone ...</span></pre></div></!--summary:>
                     <a class="btn btn-default btn-xs" href="https://til.chann.kr/ci/travis-ci-setting-on-til">more ...</a>
                 </div>
             </article>

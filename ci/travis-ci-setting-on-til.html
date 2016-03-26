@@ -13,7 +13,7 @@
 
         <meta name="author" content="CHANN" />
         <meta name="keywords" content="ci,travis-ci,dev,scrpit,yaml,til" />
-        <meta name="description" content="WIP language: python python: - &#39;3.4&#39; env: global: - GIT_COMMITTER_NAME={your-id} - GIT_COMMITTER_EMAIL={your-email} - GIT_AUTHOR_NAME={your-name} - GIT_AUTHOR_EMAIL={your-email} - secure: {your-key} before_install: - git config --global user.email &#34;{your-email}&#34; - git config --global user.name &#34;{your-id}&#34; - git clone -b generator --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git generator - cd generator install: - pip install -r ..." />
+        <meta name="description" content="TIL의 Generator 저장소와 Github Pages 저장소를 분리해서 운영하다가 지저분함을 느끼고 하나로 합침. 내 Travis-CI의 YAML 파일은 아래와 같음. language: python python: - &#39;3.4&#39; env: global: - GIT_COMMITTER_NAME={your-id} - GIT_COMMITTER_EMAIL={your-email} - GIT_AUTHOR_NAME={your-name} - GIT_AUTHOR_EMAIL={your-email} - secure: {your-key} before_install: - git config --global user.email &#34;{your-email}&#34; - git config --global user.name &#34;{your-id}&#34; - git clone ..." />
 
 	<!-- CSS Components -->
 	<link rel="stylesheet" type="text/css" href="https://til.chann.kr/theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
@@ -109,9 +109,7 @@ Today I Learned			</a>
                 </div>
                 <!--Summary: -->
 
-<blockquote>
-<p>WIP</p>
-</blockquote>
+<p>TIL의 Generator 저장소와 Github Pages 저장소를 분리해서 운영하다가 지저분함을 느끼고 하나로 합침. 내 Travis-CI의 YAML 파일은 아래와 같음.</p>
 <div class="highlight"><pre><span class="l-Scalar-Plain">language</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">python</span>
 
 <span class="l-Scalar-Plain">python</span><span class="p-Indicator">:</span>
@@ -158,6 +156,21 @@ Today I Learned			</a>
 <span class="l-Scalar-Plain">notifications</span><span class="p-Indicator">:</span>
   <span class="l-Scalar-Plain">email</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
 </pre></div>
+
+
+<hr />
+<h2>설정법 요약</h2>
+<ol>
+<li>Travis-CI 에서 해당 브랜치를 체크</li>
+<li>Github 환경설정에서 Key 발급 후 키를 암호화하여 Travis YAML 파일에 사용</li>
+<li>Travis Document 를 보며 자신에게 알맞은 프로세스로 dotfile 생성</li>
+<li>정상 작동하는지 테스트 해보고, 오류가 났다면 Travis 로그를 보고 수정</li>
+</ol>
+<hr />
+<h2>후기</h2>
+<p>Github 저장소 페이지에서 보기 좋게 하기 위해 master 브랜치에서는 오로지 MD 문서만 정리를 하였음. generator 브랜치에서 master 수정 내역을 불러와서 Pelican 으로 Publish 한 다음, gh-pages 브랜치로 Publish 결과를 다시 푸시함.</p>
+<p>결과적으로, 저장소를 이중화 했을 때보단 겉보기엔 깔끔해보이나 commit log 를 볼 땐 지저분해 보일 수 밖에 없음. Git-Flow 라던가 Github-Flow 에 맞지 않은 브랜치 전략이지만 일단은 이대로 계속 운영해 볼 생각.</p>
+<p>Git 의 Submodule 이나 Subtree 를 좀 더 자유자재로 사용 가능해지면 좀 더 깔끔하고 어썸한 방법으로 구조를 바꿀 생각.</p>
             </div>
             <!-- /.entry-content -->
     <hr/>
