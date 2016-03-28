@@ -18,6 +18,7 @@ GOOGLE_ANALYTICS = "UA-65628430-4"
 ### THEME SETTING
 THEME = 'theme/til'
 DIRECT_TEMPLATES = ('index', 'search', 'archives', 'categories','tags')
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'  # %a(요일) 
 
 BOOTSTRAP_NAVBAR_INVERSE = True
 DISPLAY_CATEGORY_IN_BREADCRUMBS = True
