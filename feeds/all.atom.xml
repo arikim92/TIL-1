@@ -313,10 +313,7 @@ start&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 &lt;p&gt;쉘스크립트 작성이 끝났으면 아래와 같이 심볼릭 링크를 추가해주자. rc는 다목적 시동 스크립트를 의미한다. upstart init은 우분투 6.10 때부터 도입되었다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;update-rc.d ghost defaults
 &lt;span class="nv"&gt;$ &lt;/span&gt;update-rc.d ghost &lt;span class="nb"&gt;enable&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;hr /&gt;</summary><category term="shell"></category><category term="terminal"></category><category term="cli"></category><category term="sh"></category><category term="init"></category><category term="init.d"></category><category term="ubuntu"></category><category term="upstart"></category></entry><entry><title>S65-01 JS, Canvas, SVG</title><link href="https://til.chann.kr/study/s65-js-study-01" rel="alternate"></link><updated>2016-02-11T22:32:00+09:00</updated><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-11:study/s65-js-study-01</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="shell"></category><category term="terminal"></category><category term="cli"></category><category term="sh"></category><category term="init"></category><category term="init.d"></category><category term="ubuntu"></category><category term="upstart"></category></entry><entry><title>S65-01 JS, Canvas, SVG</title><link href="https://til.chann.kr/study/s65-js-study-01" rel="alternate"></link><updated>2016-02-11T22:32:00+09:00</updated><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-11:study/s65-js-study-01</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;!-- 첫 번째 출석 8865 --&gt;
 
