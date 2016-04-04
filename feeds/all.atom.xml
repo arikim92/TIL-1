@@ -628,7 +628,7 @@ Canvas는 단일 엘리먼트라 상대적으로 속도가 빠를 수 밖에 없
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;code&gt;\_\_doc__&lt;/code&gt; 속성으로 설명을 적지 않아도 """(쌍따옴표 3개)를 아래와 같이 함수 내 최상단에 적어주어도 됨.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;__doc__&lt;/code&gt; 속성으로 설명을 적지 않아도 """(쌍따옴표 3개)를 아래와 같이 함수 내 최상단에 적어주어도 됨.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;plus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="sd"&gt;    This is Plus Function!!&lt;/span&gt;
@@ -747,27 +747,30 @@ print(sum(b))
 &lt;blockquote&gt;
 &lt;p&gt;함수를 래핑하여 앞뒤에서 전처리와 후처리를 하는 기능이라고 보면 됨&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;```python
-class deco_test(object):
-    def &lt;strong&gt;init&lt;/strong&gt;(self, func):  # 생성자 내부에서 func를 불러서 데코레이터 이전에 함수를 생성함
-        print("생성자!")
-        func()  # 함수를 호출&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;def __call__(self):  # 소멸자
-    print(&amp;quot;소멸자!&amp;quot;)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;deco_test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;  &lt;span class="c"&gt;# 생성자 내부에서 func를 불러서 데코레이터 이전에 함수를 생성함&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;생성자!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c"&gt;# 함수를 호출&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__call__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;  &lt;span class="c"&gt;# 소멸자&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;소멸자!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nd"&gt;@deco_test&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;shit&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;이건 물소의 똥이야!! 똥!!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;끝!!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;shit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;### result:&lt;/span&gt;
+&lt;span class="c"&gt;# 생성자!&lt;/span&gt;
+&lt;span class="c"&gt;# 이건 물소의 똥이야!! 똥!!&lt;/span&gt;
+&lt;span class="c"&gt;# 끝!!&lt;/span&gt;
+&lt;span class="c"&gt;# 소멸자!&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;@deco_test
-def shit():
-    print("이건 물소의 똥이야!! 똥!!")
-    return&lt;/p&gt;
-&lt;p&gt;print("끝!!")
-shit()&lt;/p&gt;
-&lt;h3&gt;result:&lt;/h3&gt;
-&lt;h1&gt;생성자!&lt;/h1&gt;
-&lt;h1&gt;이건 물소의 똥이야!! 똥!!&lt;/h1&gt;
-&lt;h1&gt;끝!!&lt;/h1&gt;
-&lt;h1&gt;소멸자!```&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;h2&gt;참고&lt;/h2&gt;
 &lt;ol&gt;

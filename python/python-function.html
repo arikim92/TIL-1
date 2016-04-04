@@ -367,7 +367,7 @@ Today I Learned			</a>
 </pre></div>
 
 
-<p><code>\_\_doc__</code> 속성으로 설명을 적지 않아도 """(쌍따옴표 3개)를 아래와 같이 함수 내 최상단에 적어주어도 됨.</p>
+<p><code>__doc__</code> 속성으로 설명을 적지 않아도 """(쌍따옴표 3개)를 아래와 같이 함수 내 최상단에 적어주어도 됨.</p>
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is Plus Function!!</span>
@@ -486,27 +486,30 @@ print(sum(b))
 <blockquote>
 <p>함수를 래핑하여 앞뒤에서 전처리와 후처리를 하는 기능이라고 보면 됨</p>
 </blockquote>
-<p>```python
-class deco_test(object):
-    def <strong>init</strong>(self, func):  # 생성자 내부에서 func를 불러서 데코레이터 이전에 함수를 생성함
-        print("생성자!")
-        func()  # 함수를 호출</p>
-<div class="highlight"><pre>def __call__(self):  # 소멸자
-    print(&quot;소멸자!&quot;)
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">deco_test</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>  <span class="c"># 생성자 내부에서 func를 불러서 데코레이터 이전에 함수를 생성함</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;생성자!&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>  <span class="c"># 함수를 호출</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c"># 소멸자</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;소멸자!&quot;</span><span class="p">)</span>
+
+<span class="nd">@deco_test</span>
+<span class="k">def</span> <span class="nf">shit</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;이건 물소의 똥이야!! 똥!!&quot;</span><span class="p">)</span>
+    <span class="k">return</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;끝!!&quot;</span><span class="p">)</span>
+<span class="n">shit</span><span class="p">()</span>
+
+<span class="c">### result:</span>
+<span class="c"># 생성자!</span>
+<span class="c"># 이건 물소의 똥이야!! 똥!!</span>
+<span class="c"># 끝!!</span>
+<span class="c"># 소멸자!</span>
 </pre></div>
 
 
-<p>@deco_test
-def shit():
-    print("이건 물소의 똥이야!! 똥!!")
-    return</p>
-<p>print("끝!!")
-shit()</p>
-<h3>result:</h3>
-<h1>생성자!</h1>
-<h1>이건 물소의 똥이야!! 똥!!</h1>
-<h1>끝!!</h1>
-<h1>소멸자!```</h1>
 <hr />
 <h2>참고</h2>
 <ol>
