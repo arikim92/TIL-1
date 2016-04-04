@@ -443,40 +443,40 @@ Today I Learned			</a>
 <blockquote>
 <p>이름 그대로 값을 계속 발생시키는 녀석임.</p>
 </blockquote>
-<div class="highlight"><pre>def reverse(string):
-    for i in range(len(string)-1, -1, -1):
-        yield string[i]
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
-for i in reverse(&quot;EM-EVOL&quot;):
-    print(i, end=&#39;&#39;)
-print()
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&quot;EM-EVOL&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
 
-### result:
-# LOVE-ME
+<span class="c">### result:</span>
+<span class="c"># LOVE-ME</span>
 </pre></div>
 
 
 <p>위의 코드를 보면 <code>reverse()</code> 함수는 7번 호출되며, <code>yield</code> 를 호출한 곳에서 계속 값을 돌려주지만 함수는 메모리에 그대로 있음. 그래서 다음에 <code>reverse()</code> 가 다시 호출되더라도 가장 최근에 호출된 상태로 실행됨. 위에서 <code>return</code> 을 사용했다면 L만 출력됨.</p>
-<div class="highlight"><pre>def reverse(string):
-    for i in range(len(string)-1, -1, -1):
-        return string[i]  # &lt;&lt;&lt; yield 대신 return 을 사용
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c"># &lt;&lt;&lt; yield 대신 return 을 사용</span>
 
-for i in reverse(&quot;EM-EVOL&quot;):
-    print(i, end=&#39;&#39;)
-print()
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&quot;EM-EVOL&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
 
-### result:
-# L
+<span class="c">### result:</span>
+<span class="c"># L</span>
 </pre></div>
 
 
 <p>앞서 언급한 바와 같이 제네레이터는 함수의 상태가 그대로 보존되기 때문에 이터레이터 객체를 만들 때 매우 강력하고 메모리가 절약된다는 장점을 가짐. 아래의 예제처럼 필요할 때마다 데이터를 생성하면 메모리 사용을 줄일 수 있음.</p>
-<div class="highlight"><pre>a = [1,2,3,4,5,6,7,8,9,10]  # 10개의 객체를 저장할 메모리 공간이 필요
-print(sum(a))
+<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>  <span class="c"># 10개의 객체를 저장할 메모리 공간이 필요</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 
-b = (i for i in range(10+1))  # 메모리를 저장할 공간이 필요하지 않음
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>  <span class="c"># 메모리를 저장할 공간이 필요하지 않음</span>
 
-print(sum(b))
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
 
 
