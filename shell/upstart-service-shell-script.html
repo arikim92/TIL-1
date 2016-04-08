@@ -118,26 +118,26 @@ Today I Learned			</a>
 </blockquote>
 <h2>init 파일 생성</h2>
 <p><code>/etc/init.d</code> 에 example 생성 후 아래와 같이 설정하자.</p>
-<div class="highlight"><pre><span class="nv">$ </span>chmod <span class="m">755</span> example
-<span class="nv">$ </span>chown root:root example
+<div class="highlight"><pre><span></span>$ chmod <span class="m">755</span> example
+$ chown root:root example
 </pre></div>
 
 
 <h2>쉘 스크립트</h2>
 <p><code>example</code> 의 코드는 아래와 같이 작성 가능하다.</p>
-<div class="highlight"><pre><span class="c">#!/bin/sh</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 
-<span class="c">### BEGIN INIT INFO</span>
-<span class="c"># Provides: blog</span>
-<span class="c"># Required-Start:</span>
-<span class="c"># Required-Stop:</span>
-<span class="c"># Default-Start: 2 3 4 5</span>
-<span class="c"># Default-Stop: 0 1 6</span>
-<span class="c">### END INIT INFO</span>
+<span class="c1">### BEGIN INIT INFO</span>
+<span class="c1"># Provides: blog</span>
+<span class="c1"># Required-Start:</span>
+<span class="c1"># Required-Stop:</span>
+<span class="c1"># Default-Start: 2 3 4 5</span>
+<span class="c1"># Default-Stop: 0 1 6</span>
+<span class="c1">### END INIT INFO</span>
 
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;service&quot;</span>    
 
-stop<span class="o">()</span> <span class="o">{</span>  <span class="c"># -c 옵션은 해당 USER로 실행함을 의미.</span>
+stop<span class="o">()</span> <span class="o">{</span>  <span class="c1"># -c 옵션은 해당 USER로 실행함을 의미.</span>
     sudo su - <span class="nv">$USER</span> -c <span class="s2">&quot;# something to stop&quot;</span>
 <span class="o">}</span>
 
@@ -156,7 +156,7 @@ start<span class="o">()</span> <span class="o">{</span>
         stop
         start
         <span class="p">;;</span>
-    <span class="c"># 필요할 경우 reload 등의 옵션을 추가적으로 구현.</span>
+    <span class="c1"># 필요할 경우 reload 등의 옵션을 추가적으로 구현.</span>
     *<span class="o">)</span>
     <span class="nb">echo</span> <span class="s2">&quot;Usage: </span><span class="nv">$0</span><span class="s2"> {start|stop|restart}&quot;</span>
 <span class="k">esac</span>  
@@ -166,8 +166,8 @@ start<span class="o">()</span> <span class="o">{</span>
 <p>위의 주석처리 된 부분에서 <code>runlevel</code>을 2, 3, 4, 5라고 명시한 것(Default-Start)은 싱글유저 모드 이외엔 자동 시작하겠다는 의미이다. 위의 스크립트는 굉장히 간단하니 기타 응용 방법은 <code>/etc/init.d/</code> 의 다른 스크립트들을 보고 참고하자.</p>
 <h2>심볼릭 링크 추가</h2>
 <p>쉘스크립트 작성이 끝났으면 아래와 같이 심볼릭 링크를 추가해주자. rc는 다목적 시동 스크립트를 의미한다. upstart init은 우분투 6.10 때부터 도입되었다.</p>
-<div class="highlight"><pre><span class="nv">$ </span>update-rc.d ghost defaults
-<span class="nv">$ </span>update-rc.d ghost <span class="nb">enable</span>
+<div class="highlight"><pre><span></span>$ update-rc.d ghost defaults
+$ update-rc.d ghost <span class="nb">enable</span>
 </pre></div>
             </div>
             <!-- /.entry-content -->

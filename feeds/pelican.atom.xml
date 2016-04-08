@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/pelican.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-02-27T18:00:00+09:00</updated><entry><title>Pelican 문서 작성법</title><link href="https://til.chann.kr/pelican/how-to-write-pelican-docs" rel="alternate"></link><updated>2016-02-27T18:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-27:pelican/how-to-write-pelican-docs</id><summary type="html">&lt;!--Summary: --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/pelican.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-02-27T18:00:00+09:00</updated><entry><title>Pelican 문서 작성법</title><link href="https://til.chann.kr/pelican/how-to-write-pelican-docs" rel="alternate"></link><published>2016-02-27T18:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-27:pelican/how-to-write-pelican-docs</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;p&gt;개인적으로 &lt;code&gt;.rst&lt;/code&gt; &lt;a href="https://en.wikipedia.org/wiki/ReStructuredText"&gt;(reStructuredText)&lt;/a&gt; 방식의 문서를 선호하지 않으므로, 이 글에서는 &lt;code&gt;.md&lt;/code&gt; &lt;a href="https://nolboo.github.io/blog/2013/09/07/john-gruber-markdown/"&gt;(Markdown)&lt;/a&gt; 방식의 문서를 작성하는 법을 다룰 예정.&lt;/p&gt;
 &lt;h2&gt;기본 틀&lt;/h2&gt;
 &lt;p&gt;양식의 기본적인 틀은 아래와 같다. Slug나 Summary 와 같이 없어도 그만인 것들은 생략 가능. Slug는 문서의 URL을 생성하는 것인데, 가급적 영어로 적는 것을 추천. 한글로 적으면 자동으로 한글리쉬(...) 같은 형태로 바꿔버리기 때문. 예를들어, &lt;code&gt;한글로 적지마요&lt;/code&gt; 를 Slug로 하면 &lt;code&gt;hangeulro-jeokjimayo&lt;/code&gt; 같은 형태로 문서가 발행됨.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;문서&lt;/span&gt; &lt;span class="err"&gt;제목&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;문서&lt;/span&gt; &lt;span class="err"&gt;제목&lt;/span&gt;
 &lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2016&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt; &lt;span class="mi"&gt;18&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
 &lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2016&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;09&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;00&lt;/span&gt;
 &lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;펠리칸&lt;/span&gt;
@@ -33,7 +33,7 @@
 &lt;hr /&gt;
 &lt;h2&gt;Github Pages 에서 404 페이지 작성&lt;/h2&gt;
 &lt;p&gt;아래와 같이 작성하면 됨. &lt;em&gt;Status&lt;/em&gt; 를 &lt;em&gt;hidden&lt;/em&gt; 으로 하면 목록에 뜨지 않음. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Not&lt;/span&gt; &lt;span class="n"&gt;Found&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Not&lt;/span&gt; &lt;span class="n"&gt;Found&lt;/span&gt;
 &lt;span class="n"&gt;Slug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;
 &lt;span class="n"&gt;Save_as&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;404&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;html&lt;/span&gt;
 &lt;span class="n"&gt;Status&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hidden&lt;/span&gt;

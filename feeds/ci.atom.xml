@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/ci.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-03-22T23:00:00+09:00</updated><entry><title>TIL에 Travis-CI 적용하기</title><link href="https://til.chann.kr/ci/travis-ci-setting-on-til" rel="alternate"></link><updated>2016-03-22T23:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-03-22:ci/travis-ci-setting-on-til</id><summary type="html">&lt;!--Summary: --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/ci.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-03-22T23:00:00+09:00</updated><entry><title>TIL에 Travis-CI 적용하기</title><link href="https://til.chann.kr/ci/travis-ci-setting-on-til" rel="alternate"></link><published>2016-03-22T23:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-03-22:ci/travis-ci-setting-on-til</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;p&gt;TIL의 Generator 저장소와 Github Pages 저장소를 분리해서 운영하다가 지저분함을 느끼고 하나로 합침. 내 Travis-CI의 YAML 파일은 아래와 같음.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="l-Scalar-Plain"&gt;language&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;python&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;language&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;python&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;3.4&amp;#39;&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;3.4&amp;#39;&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;env&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l-Scalar-Plain"&gt;global&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;GIT_COMMITTER_NAME={your-id}&lt;/span&gt;
-  &lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;GIT_COMMITTER_EMAIL={your-email}&lt;/span&gt;
-  &lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;GIT_AUTHOR_NAME={your-name}&lt;/span&gt;
-  &lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;GIT_AUTHOR_EMAIL={your-email}&lt;/span&gt;
-  &lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;secure&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p-Indicator"&gt;{&lt;/span&gt;&lt;span class="nv"&gt;your-key&lt;/span&gt;&lt;span class="p-Indicator"&gt;}&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;env&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;global&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;GIT_COMMITTER_NAME={your-id}&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;GIT_COMMITTER_EMAIL={your-email}&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;GIT_AUTHOR_NAME={your-name}&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;GIT_AUTHOR_EMAIL={your-email}&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;secure&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;&lt;span class="nv"&gt;your-key&lt;/span&gt;&lt;span class="p p-Indicator"&gt;}&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;before_install&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git config --global user.email &amp;quot;{your-email}&amp;quot;&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git config --global user.name &amp;quot;{your-id}&amp;quot;&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git clone -b generator --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git generator&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;cd generator&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;before_install&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config --global user.email &amp;quot;{your-email}&amp;quot;&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git config --global user.name &amp;quot;{your-id}&amp;quot;&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git clone -b generator --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git generator&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cd generator&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;install&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;pip install -r requirements.txt -q&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;npm install -g less&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;install&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;pip install -r requirements.txt -q&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;npm install -g less&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;before_script&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git clone -b gh-pages --depth 1 --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git output&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;cd content&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;rm -rf posts&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git clone -b master --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git posts&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;cd ..&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;before_script&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git clone -b gh-pages --depth 1 --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git output&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cd content&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rm -rf posts&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git clone -b master --quiet https://${GH_TOKEN}@github.com/channprj/TIL.git posts&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cd ..&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;script&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;make publish&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;script&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;make publish&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;after_success&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;cd output&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git add -A&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git commit -m &amp;quot;Pages updated from Github using Travis-CI.&amp;quot;&lt;/span&gt;
-&lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;git push https://${GH_TOKEN}@github.com/channprj/TIL.git gh-pages --quiet&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;after_success&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cd output&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git add -A&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git commit -m &amp;quot;Pages updated from Github using Travis-CI.&amp;quot;&lt;/span&gt;
+&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;git push https://${GH_TOKEN}@github.com/channprj/TIL.git gh-pages --quiet&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;branches&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l-Scalar-Plain"&gt;only&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;master&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;branches&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;only&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;master&lt;/span&gt;
 
-&lt;span class="l-Scalar-Plain"&gt;notifications&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l-Scalar-Plain"&gt;email&lt;/span&gt;&lt;span class="p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l-Scalar-Plain"&gt;false&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;notifications&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;email&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;false&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

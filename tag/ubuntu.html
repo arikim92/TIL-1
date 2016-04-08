@@ -74,21 +74,21 @@ Today I Learned			</a>
 </blockquote>
 <h2>init 파일 생성</h2>
 <p><code>/etc/init.d</code> 에 example 생성 후 아래와 같이 설정하자.</p>
-<div class="highlight"><pre><span class="nv">$ </span>chmod <span class="m">755</span> example
-<span class="nv">$ </span>chown root:root example
+<div class="highlight"><pre><span></span>$ chmod <span class="m">755</span> example
+$ chown root:root example
 </pre></div>
 
 
 <h2>쉘 스크립트</h2>
 <p><code>example</code> 의 코드는 아래와 같이 작성 가능하다.</p>
-<div class="highlight"><pre><span class="c">#!/bin/sh</span>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 
-<span class="c">### BEGIN INIT INFO</span>
-<span class="c"># Provides: blog</span>
-<span class="c"># Required-Start:</span>
-<span class="c"># Required-Stop:</span>
-<span class="c"># Default-Start: 2 3 4 5</span>
-<span class="c"># Default-Stop: 0 1 ...</span></pre></div></!--summary:>
+<span class="c1">### BEGIN INIT INFO</span>
+<span class="c1"># Provides: blog</span>
+<span class="c1"># Required-Start:</span>
+<span class="c1"># Required-Stop:</span>
+<span class="c1"># Default-Start: 2 3 4 5</span>
+<span class="c1"># Default-Stop: 0 1 ...</span></pre></div></!--summary:>
                     <a class="btn btn-default btn-xs" href="https://til.chann.kr/shell/upstart-service-shell-script">more ...</a>
                 </div>
             </article>

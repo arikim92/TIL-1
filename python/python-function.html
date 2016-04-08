@@ -124,7 +124,7 @@ Today I Learned			</a>
                 <!--Summary: -->
 
 <h2>파이썬 함수 개념</h2>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
 </pre></div>
 
@@ -134,9 +134,9 @@ Today I Learned			</a>
 <hr />
 <h2>일반 구조</h2>
 <p>일반적인 파이썬 함수는 아래와 같이 생김.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="err">함수이름(변수1, 변수2, ...):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="err">함수이름(변수1, 변수2, ...):</span>
     <span class="k">if</span><span class="p">(</span><span class="err">조건</span><span class="p">):</span>
-        <span class="c"># something...</span>
+        <span class="c1"># something...</span>
     <span class="k">return</span> <span class="err">반환값</span>
 </pre></div>
 
@@ -149,21 +149,21 @@ Today I Learned			</a>
 <hr />
 <h2>입력 변수 설정(Input Variable)</h2>
 <p>입력 변수의 갯수가 변화할 때는 아래와 같음.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="err">함수이름(*변수):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="err">함수이름(*변수):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span> 
         <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span> 
-    <span class="c"># something...</span>
+    <span class="c1"># something...</span>
     <span class="k">return</span> <span class="err">반환값</span>
 </pre></div>
 
 
 <p>선택인자와 여러 개의 입력 변수를 통해 아래와 같이 활용 가능. 아래와 같이 <code>*args</code> 로 가변인자를 받는 것은 튜플 형태로 처리가 됨. 가변인자는 맨 뒤에 위치해야.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">sum_mul</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span> 
-    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">&quot;sum&quot;</span><span class="p">:</span> 
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_mul</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;sum&quot;</span><span class="p">:</span> 
         <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span> 
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span> 
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">i</span> 
-    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s">&quot;mul&quot;</span><span class="p">:</span> 
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;mul&quot;</span><span class="p">:</span> 
         <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span> 
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span> 
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">*</span> <span class="n">i</span> 
@@ -173,32 +173,32 @@ Today I Learned			</a>
 
 <hr />
 <p>아래와 같이 함수에서 입력받는 변수의 초기값을 설정 가능. 단, 초기값을 부여할 변수는 항상 맨 뒤에 위치시켜야.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">true_or_false</span><span class="p">(</span><span class="n">is_false</span><span class="p">,</span> <span class="n">is_true</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span> 
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">true_or_false</span><span class="p">(</span><span class="n">is_false</span><span class="p">,</span> <span class="n">is_true</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span> 
     <span class="k">if</span> <span class="n">isTrue</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> 
-        <span class="c"># something...</span>
+        <span class="c1"># something...</span>
 </pre></div>
 
 
 <p><code>true_or_false(1)</code> 또는 <code>true_or_false(1, 0)</code> 과 같은 형태로 함수를 사용할 수 있음.</p>
 <hr />
 <p>정의되지 않은 인자는 **를 붙이면 되며, 인자를 사전 형식으로 만들어서 전달하는 것이 특징. 아래와 같이 URL 처리 시 매우 편리하고 유용하게 사용. 위의 내용들과 마찬가지로 정의되지 않은 인자는 항상 맨 뒤에 위치시켜야.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">add_student</span><span class="p">(</span><span class="o">**</span><span class="n">student</span><span class="p">):</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://chann.kr/?&quot;</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_student</span><span class="p">(</span><span class="o">**</span><span class="n">student</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://chann.kr/?&quot;</span>
 
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">student</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">url</span> <span class="o">+=</span> <span class="n">key</span> <span class="o">+</span> <span class="s">&quot;=&quot;</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+</span> <span class="s">&quot;&amp;&quot;</span>
+        <span class="n">url</span> <span class="o">+=</span> <span class="n">key</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="n">student</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;&amp;&quot;</span>
 
     <span class="k">return</span> <span class="n">url</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">add_student</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">&#39;student_id&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s">&#39;student_pw&#39;</span><span class="p">))</span>
-<span class="c"># https://chann.kr/?id=student_id&amp;password=student_pw&amp;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">add_student</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;student_id&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;student_pw&#39;</span><span class="p">))</span>
+<span class="c1"># https://chann.kr/?id=student_id&amp;password=student_pw&amp;</span>
 </pre></div>
 
 
 <hr />
 <h2>인자 전달</h2>
 <p>파이썬에서는 인자를 호출자 내부 객체의 레퍼런스로 전달함. 그러나 기존 컴파일언어인 C/C++의 <code>Call-by-reference</code> 와는 다름. 호출자가 전달하는 변수는 변경 가능한 경우와 변경 불가능한 경우의 처리방식이 다름.</p>
-<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mi">3</span>
 
@@ -206,17 +206,17 @@ Today I Learned			</a>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
 
 <span class="k">def</span> <span class="nf">sum_modify</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c"># 이름이 x이고 값이 100인 객체가 생성됨.</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># 이름이 x이고 값이 100인 객체가 생성됨.</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">y</span>
 
-<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>  <span class="c"># result: 3</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>  <span class="c1"># result: 3</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">sum_modify</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>  <span class="c"># result: 103</span>
-<span class="c"># 함수 내부의 변경사항이 함수 외부에 영향을 미치지 않음.</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sum_modify</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>  <span class="c1"># result: 103</span>
+<span class="c1"># 함수 내부의 변경사항이 함수 외부에 영향을 미치지 않음.</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c"># result: 1</span>
-<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c"># result: 2</span>
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c"># result: 3</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># result: 1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># result: 2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># result: 3</span>
 </pre></div>
 
 
@@ -225,16 +225,16 @@ Today I Learned			</a>
 <blockquote>
 <p>정수형 변수는 변경 불가능한 변수이고, 리스트는 변경 가능한 변수임.</p>
 </blockquote>
-<div class="highlight"><pre><span class="n">word</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">word</span> <span class="o">+=</span> <span class="s">&#39;OSX&#39;</span>
+<div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">word</span> <span class="o">+=</span> <span class="s1">&#39;OSX&#39;</span>
 
 <span class="k">def</span> <span class="nf">change_char</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="s">&#39;S&#39;</span>
+    <span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="s1">&#39;S&#39;</span>
     <span class="k">return</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c"># [&#39;O&#39;, &#39;S&#39;, &#39;X&#39;]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c1"># [&#39;O&#39;, &#39;S&#39;, &#39;X&#39;]</span>
 <span class="n">change_char</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c"># [&#39;O&#39;, &#39;S&#39;, &#39;S&#39;]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>  <span class="c1"># [&#39;O&#39;, &#39;S&#39;, &#39;S&#39;]</span>
 </pre></div>
 
 
@@ -242,35 +242,35 @@ Today I Learned			</a>
 <h2>스코핑 규칙(Scoping Rule)</h2>
 <p>객체는 별도의 네임스페이스를 가짐. 함수 내부의 변수는 일단 함수 내부의 네임스페이스를 참조함. 함수 내부의 네임스페이스에서 변수를 찾지 못하면 상위 네임스페이스에서 찾음. 먼저 함수 내부의 공간인 <code>Local scope</code> 에서 찾다가, 전역 영역인 <code>Global scope</code> 에서 찾고, 그래도 없을 시엔 파이썬 내장 영역인 <code>Built-in scope</code> 에서 찾음. 이것을 줄여서 <code>LGB Rule</code> 이라고 부름.</p>
 <p>함수 안의 변수는 함수 안에서만 사용 가능. 함수 밖의 변수를 함수 안에서 불러서 변경시키고 싶으면 <code>global</code> 키워드를 사용하면 되지만 각 함수는 독립적으로 존재하도록 짜는 것이 좋음. 예시는 아래의 코드 참조.</p>
-<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">def</span> <span class="nf">plus_one</span><span class="p">():</span> 
-    <span class="k">global</span> <span class="n">a</span>  <span class="c"># 권장 x</span>
+    <span class="k">global</span> <span class="n">a</span>  <span class="c1"># 권장 x</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
 
 <span class="k">def</span> <span class="nf">minus_one</span><span class="p">(</span><span class="n">a</span><span class="p">):</span> 
     <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">-</span><span class="mi">1</span>
     <span class="k">return</span> <span class="n">a</span>
 
-<span class="n">a</span> <span class="o">=</span> <span class="n">minus_one</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c"># 권장 o</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">minus_one</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 권장 o</span>
 </pre></div>
 
 
 <hr />
 <p>내장영역의 변수를 보려면 <strong>builtins</strong> 를 검색하면 됨.</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__builtins__</span><span class="p">)</span>
 </pre></div>
 
 
 <hr />
 <h3>리턴(Return)</h3>
 <p>함수에서는 return으로 함수를 종료하고 해당 함수를 호출한 곳으로 돌아감. 이 때 return값을 통해 어떤 종류의 객체도 반환 가능하지만 오직 한 객체만 반환 가능함. 따라서 리턴하고자 하는 값이 여러개일 때는 class나 tuple로 묶어서 반환 가능. 보통은 상수와 같은 단일값을 리턴. return값을 따로 명시하지 않으면 None 객체가 반환.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>  <span class="c"># tuple 형태로 1과 2를 swap</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c"># result: 2 1</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># tuple 형태로 1과 2를 swap</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># result: 2 1</span>
 </pre></div>
 
 
@@ -278,10 +278,10 @@ Today I Learned			</a>
 <hr />
 <h2>람다 함수(Lambda Function)</h2>
 <p>Java와 마찬가지로 람다 함수는 익명 함수인데, 필요한 곳 어디에서나 쓰일 수 있지만 return 을 적을 수 없음. return 을 적지 않아도 한 줄을 실행한 결과값을 반환함. 예제는 아래와 같음. 이름이 왜 람다인가 찾아보니 <a href="https://ko.wikipedia.org/wiki/람다_대수">람다 대수</a>에서 영향을 받은 것 같음.</p>
-<div class="highlight"><pre><span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c"># result: 3</span>
+<div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>  <span class="c1"># result: 3</span>
 
-<span class="k">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)(</span><span class="mi">3</span><span class="p">))</span>  <span class="c"># result: 9</span>
+<span class="k">print</span><span class="p">((</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)(</span><span class="mi">3</span><span class="p">))</span>  <span class="c1"># result: 9</span>
 </pre></div>
 
 
@@ -293,18 +293,18 @@ Today I Learned			</a>
 <blockquote>
 <p>이름 그대로 함수에서 함수를 자꾸 호출하는 함수</p>
 </blockquote>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">1</span>
 
     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c"># result: 120</span>
+<span class="k">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>  <span class="c1"># result: 120</span>
 </pre></div>
 
 
 <p>재귀 함수는 제네레이터(generator) 에서도 유용하게 쓰임.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">crazy</span><span class="p">(</span><span class="n">min_</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">crazy</span><span class="p">(</span><span class="n">min_</span><span class="p">):</span>
     <span class="k">yield</span> <span class="n">min_</span>
     <span class="n">g</span><span class="o">=</span><span class="n">crazy</span><span class="p">(</span><span class="n">min_</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
@@ -321,7 +321,7 @@ Today I Learned			</a>
 <blockquote>
 <p>이름 그대로 그냥 지나치는 녀석.</p>
 </blockquote>
-<div class="highlight"><pre><span class="k">class</span> <span class="nc">empty_dream</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">empty_dream</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 
@@ -332,12 +332,12 @@ Today I Learned			</a>
 <blockquote>
 <p>윈도우에서의 help 라던가 리눅스에서의 <code>man</code> 명령어와 유사하다고 보면 됨.</p>
 </blockquote>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="k">print</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="k">print</span><span class="p">)</span>
 
 <span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="k">print</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
 
 <span class="k">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
     <span class="n">Prints</span> <span class="n">the</span> <span class="n">values</span> <span class="n">to</span> <span class="n">a</span> <span class="n">stream</span><span class="p">,</span> <span class="ow">or</span> <span class="n">to</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="n">by</span> <span class="n">default</span><span class="o">.</span>
     <span class="n">Optional</span> <span class="n">keyword</span> <span class="n">arguments</span><span class="p">:</span>
@@ -349,26 +349,26 @@ Today I Learned			</a>
 
 
 <p>직접 만든 함수에 대한 추가 설명을 넣고 싶을 떈 <code>__doc__</code> 속성을 사용하면 됨. <code>__doc__</code> 속성은 객체에 대한 설명을 적는 데 사용함. </p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c"># result: 2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">plus</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># result: 2</span>
 
-<span class="n">plus</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="s">&quot;Just plus 1&quot;</span>
+<span class="n">plus</span><span class="o">.</span><span class="n">__doc__</span> <span class="o">=</span> <span class="s2">&quot;Just plus 1&quot;</span>
 
 <span class="n">help</span><span class="p">(</span><span class="n">plus</span><span class="p">)</span>
 
-<span class="c">### result:</span>
-<span class="c"># 2</span>
-<span class="c"># Help on function plus in module __main__:</span>
-<span class="c"># </span>
-<span class="c"># plus(x)</span>
-<span class="c">#     Just plus 1</span>
+<span class="c1">### result:</span>
+<span class="c1"># 2</span>
+<span class="c1"># Help on function plus in module __main__:</span>
+<span class="c1"># </span>
+<span class="c1"># plus(x)</span>
+<span class="c1">#     Just plus 1</span>
 </pre></div>
 
 
 <p><code>__doc__</code> 속성으로 설명을 적지 않아도 """(쌍따옴표 3개)를 아래와 같이 함수 내 최상단에 적어주어도 됨.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is Plus Function!!</span>
 <span class="sd">    Oh yeah plus me baby :-)</span>
@@ -377,12 +377,12 @@ Today I Learned			</a>
 
 <span class="n">help</span><span class="p">(</span><span class="n">plus</span><span class="p">)</span>
 
-<span class="c">### result:</span>
-<span class="c"># Help on function plus in module __main__:</span>
-<span class="c"># </span>
-<span class="c"># plus(x)</span>
-<span class="c">#     This is Plus Function!!</span>
-<span class="c">#     Oh yeah plus me baby :-)</span>
+<span class="c1">### result:</span>
+<span class="c1"># Help on function plus in module __main__:</span>
+<span class="c1"># </span>
+<span class="c1"># plus(x)</span>
+<span class="c1">#     This is Plus Function!!</span>
+<span class="c1">#     Oh yeah plus me baby :-)</span>
 </pre></div>
 
 
@@ -392,29 +392,29 @@ Today I Learned			</a>
 <blockquote>
 <p>이름 그대로 되풀이, 반복하는 기능을 가진 녀석임.</p>
 </blockquote>
-<div class="highlight"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>  <span class="c"># 리스트 순회</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]:</span>  <span class="c1"># 리스트 순회</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">()</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">):</span>  <span class="c"># 튜플 순회</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">):</span>  <span class="c1"># 튜플 순회</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">()</span>
 
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s">&#39;s&#39;</span><span class="p">:</span><span class="s">&#39;small&#39;</span><span class="p">,</span> <span class="s">&#39;m&#39;</span><span class="p">:</span><span class="s">&#39;medium&#39;</span><span class="p">,</span> <span class="s">&#39;l&#39;</span><span class="p">:</span><span class="s">&#39;large&#39;</span><span class="p">}:</span>  <span class="c"># 딕셔너리 순회</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span><span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">:</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">:</span><span class="s1">&#39;large&#39;</span><span class="p">}:</span>  <span class="c1"># 딕셔너리 순회</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">()</span>
 
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">&quot;Oh good boy!&quot;</span><span class="p">:</span>  <span class="c"># 한 글자씩 문자열 순회</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">&quot;Oh good boy!&quot;</span><span class="p">:</span>  <span class="c1"># 한 글자씩 문자열 순회</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">()</span>
 
-<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;fake.txt&quot;</span><span class="p">):</span>  <span class="c"># 파일 내용을 라인 단위로 순회</span>
+<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fake.txt&quot;</span><span class="p">):</span>  <span class="c1"># 파일 내용을 라인 단위로 순회</span>
     <span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 
 
 <p>이터레이터를 확인해 보는 예제는 아래와 같음.</p>
-<div class="highlight"><pre><span class="n">string</span> <span class="o">=</span> <span class="s">&quot;OSX&quot;</span>
+<div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;OSX&quot;</span>
 
 <span class="n">iter_check</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">iter_check</span><span class="p">)</span>
@@ -424,15 +424,15 @@ Today I Learned			</a>
 <span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">iter_check</span><span class="p">))</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">iter_check</span><span class="p">))</span>
 
-<span class="c">### result:</span>
-<span class="c"># &lt;str_iterator object at 0x106adb898&gt;</span>
-<span class="c"># O</span>
-<span class="c"># S</span>
-<span class="c"># X</span>
-<span class="c"># Traceback (most recent call last):</span>
-<span class="c">#   File &quot;/Users/CHANN/git/test.py&quot;, line 9, in &lt;module&gt;</span>
-<span class="c">#     print(next(iter_check))</span>
-<span class="c"># StopIteration</span>
+<span class="c1">### result:</span>
+<span class="c1"># &lt;str_iterator object at 0x106adb898&gt;</span>
+<span class="c1"># O</span>
+<span class="c1"># S</span>
+<span class="c1"># X</span>
+<span class="c1"># Traceback (most recent call last):</span>
+<span class="c1">#   File &quot;/Users/CHANN/git/test.py&quot;, line 9, in &lt;module&gt;</span>
+<span class="c1">#     print(next(iter_check))</span>
+<span class="c1"># StopIteration</span>
 </pre></div>
 
 
@@ -443,38 +443,38 @@ Today I Learned			</a>
 <blockquote>
 <p>이름 그대로 값을 계속 발생시키는 녀석임.</p>
 </blockquote>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">yield</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&quot;EM-EVOL&quot;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s2">&quot;EM-EVOL&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">()</span>
 
-<span class="c">### result:</span>
-<span class="c"># LOVE-ME</span>
+<span class="c1">### result:</span>
+<span class="c1"># LOVE-ME</span>
 </pre></div>
 
 
 <p>위의 코드를 보면 <code>reverse()</code> 함수는 7번 호출되며, <code>yield</code> 를 호출한 곳에서 계속 값을 돌려주지만 함수는 메모리에 그대로 있음. 그래서 다음에 <code>reverse()</code> 가 다시 호출되더라도 가장 최근에 호출된 상태로 실행됨. 위에서 <code>return</code> 을 사용했다면 L만 출력됨.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c"># &lt;&lt;&lt; yield 대신 return 을 사용</span>
+        <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># &lt;&lt;&lt; yield 대신 return 을 사용</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s">&quot;EM-EVOL&quot;</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">reverse</span><span class="p">(</span><span class="s2">&quot;EM-EVOL&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">()</span>
 
-<span class="c">### result:</span>
-<span class="c"># L</span>
+<span class="c1">### result:</span>
+<span class="c1"># L</span>
 </pre></div>
 
 
 <p>앞서 언급한 바와 같이 제네레이터는 함수의 상태가 그대로 보존되기 때문에 이터레이터 객체를 만들 때 매우 강력하고 메모리가 절약된다는 장점을 가짐. 아래의 예제처럼 필요할 때마다 데이터를 생성하면 메모리 사용을 줄일 수 있음.</p>
-<div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>  <span class="c"># 10개의 객체를 저장할 메모리 공간이 필요</span>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>  <span class="c1"># 10개의 객체를 저장할 메모리 공간이 필요</span>
 <span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 
-<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>  <span class="c"># 메모리를 저장할 공간이 필요하지 않음</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># 메모리를 저장할 공간이 필요하지 않음</span>
 
 <span class="k">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 </pre></div>
@@ -486,27 +486,27 @@ Today I Learned			</a>
 <blockquote>
 <p>함수를 래핑하여 앞뒤에서 전처리와 후처리를 하는 기능이라고 보면 됨</p>
 </blockquote>
-<div class="highlight"><pre><span class="k">class</span> <span class="nc">deco_test</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>  <span class="c"># 생성자 내부에서 func를 불러서 데코레이터 이전에 함수를 생성함</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;생성자!&quot;</span><span class="p">)</span>
-        <span class="n">func</span><span class="p">()</span>  <span class="c"># 함수를 호출</span>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">deco_test</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>  <span class="c1"># 생성자 내부에서 func를 불러서 데코레이터 이전에 함수를 생성함</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;생성자!&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>  <span class="c1"># 함수를 호출</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c"># 함수가 호출될 떄</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&quot;호출됨!&quot;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># 함수가 호출될 떄</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;호출됨!&quot;</span><span class="p">)</span>
 
-<span class="nd">@deco_test</span>  <span class="c"># deco_test에 shit 함수를 꾸며줌.</span>
+<span class="nd">@deco_test</span>  <span class="c1"># deco_test에 shit 함수를 꾸며줌.</span>
 <span class="k">def</span> <span class="nf">deco</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;꾸며줌!!&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;꾸며줌!!&quot;</span><span class="p">)</span>
     <span class="k">return</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;끝!!&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;끝!!&quot;</span><span class="p">)</span>
 <span class="n">deco</span><span class="p">()</span>
 
-<span class="c">### result:</span>
-<span class="c"># 생성자!</span>
-<span class="c"># 꾸며줌!!</span>
-<span class="c"># 끝!!</span>
-<span class="c"># 호출됨!</span>
+<span class="c1">### result:</span>
+<span class="c1"># 생성자!</span>
+<span class="c1"># 꾸며줌!!</span>
+<span class="c1"># 끝!!</span>
+<span class="c1"># 호출됨!</span>
 </pre></div>
 
 
