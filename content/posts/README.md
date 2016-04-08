@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/channprj/TIL.svg?branch=master)](https://travis-ci.org/channprj/TIL)
-[![Requirements Status](https://requires.io/github/channprj/til.chann.kr-source/requirements.svg?branch=master)](https://requires.io/github/channprj/til.chann.kr-source/requirements/?branch=master)
+[![Requirements Status](https://requires.io/github/channprj/TIL/requirements.svg?branch=generator)](https://requires.io/github/channprj/TIL/requirements/?branch=generator)
 # Today I Learned
 오늘 배운 내용을 정리하는 곳입니다.
 
@@ -16,7 +16,7 @@
 * Python 3와 [Pelican](https://github.com/getpelican/pelican)을 이용하여 Github Pages를 생성
 * Travis-CI로 동기화되어 자동으로 [Today I Learned 사이트](https://til.chann.kr)에 반영됨
 
-## Etc
+## 기타
 :electric_plug: [Source](https://github.com/channprj/TIL)
 :memo: [Web](https://til.chann.kr)
 
