@@ -65,6 +65,22 @@ Today I Learned			</a>
 	<div class="wrap row">
 		<div class="col-lg-12">
             <article>
+                <h2><a href="https://til.chann.kr/python/upgrade-all-python-packages">파이썬 패키지 한번에 업그레이드하기</a></h2>
+                <div class="summary"><!--Summary: -->
+
+<p><a href="https://github.com/channprj/TIL">TIL</a>을 운영하면서 <a href="http://requires.io">require.io</a> 서비스의 뱃지가 <em>outdated</em> 라는 영롱한 글자와 함께 노란불이 들어와 있는 것이 영 거슬렸음.</p>
+<p>여러가지 방법이 있지만 요약하면 대개 아래와 같음.</p>
+<ol>
+<li>쉘 명령어로 해결</li>
+<li>파이썬 코드로 해결 (쉘 사용)</li>
+</ol>
+<hr />
+<p>1번의 경우 <code>$ pip list --outdated</code> 라는 쉘 스크립트와 정규표현식을 활용해서 파일을 작성 가능하지만, 쉘 스크립트와 정규표현식은 아직 ...</p></!--summary:>
+                    <a class="btn btn-default btn-xs" href="https://til.chann.kr/python/upgrade-all-python-packages">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="https://til.chann.kr/ci/travis-ci-setting-on-til">TIL에 Travis-CI 적용하기</a></h2>
                 <div class="summary"><!--Summary: -->
 
@@ -216,15 +232,6 @@ $ chown root:root example
 <h2>runlevel 이란</h2>
 <p><code>runlevel</code> 이란, 리눅스 시스템 관리의 용이함을 위하여 서비스의 실행을 단계별로 구분하여 적용하는 것을 말함. 보통 0 ~ 6 까지 총 7가지 모드가 있음. 리눅스마다 조금씩 다르지만 0(정지), 1(싱글모드), 6(재시작)은 일치함. 낮은 레벨일수록, 시스템 시작시 불러오는 드라이버나 데몬 수가 적음. <code>runlevel</code> 은 높아지는 방향으로 진행되며, 부팅되면 ...</p></!--summary:>
                     <a class="btn btn-default btn-xs" href="https://til.chann.kr/linux/runlevel-summary">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="https://til.chann.kr/shell/ohmyzsh-autocomplete-bug-fix">zsh에서 vim 명령어 자동완성 오류</a></h2>
-                <div class="summary"><!--Summary: -->
-
-<p>갑자기 <code>vim</code> 을 입력하고 tab을 누르니 <code>_arguments:450: _vim_files: function definition file not found</code> 라는 오류메시지가 떴다. 구글링을 해 보니 홈 폴더에서 <code>.zcompdump*</code> 파일을 지우면 대체로 잔버그가 해결된다는 답변<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>에 꽤나 힘이 실려있었는데, 이번 경우에는 좀처럼 통하지 않았다.  알고 보니 <code>exec zsh</code> 해야 해결되었다. 아무 생각 없이 <code>source .zshrc ...</code></p></!--summary:>
-                    <a class="btn btn-default btn-xs" href="https://til.chann.kr/shell/ohmyzsh-autocomplete-bug-fix">more ...</a>
                 </div>
             </article>
             <hr/>
