@@ -1,5 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/all.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-04-08T21:00:00+09:00</updated><entry><title>파이썬 패키지 한번에 업그레이드하기</title><link href="https://til.chann.kr/python/upgrade-all-python-packages" rel="alternate"></link><published>2016-04-08T21:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-04-08:python/upgrade-all-python-packages</id><summary type="html">&lt;!--Summary: --&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Today I Learned</title><link href="https://til.chann.kr/" rel="alternate"></link><link href="https://til.chann.kr/feeds/all.atom.xml" rel="self"></link><id>https://til.chann.kr/</id><updated>2016-04-09T21:00:00+09:00</updated><entry><title>파이썬 제어문</title><link href="https://til.chann.kr/python/loop-condition" rel="alternate"></link><published>2016-04-09T21:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-04-09:python/loop-condition</id><summary type="html">&lt;!--Summary: --&gt;
+
+&lt;h2&gt;조건문&lt;/h2&gt;
+&lt;p&gt;다른 언어들과 마찬가지로 &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;elif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt; 조건문이 있음. 여러줄일 경우 들여쓰기로 블록을 지정해야 함. 예시는 아래와 같음.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;if 문&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a is 1 !!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a is 2 !!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;a is not 1 and 2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h4&gt;파이썬에서의 장점&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;C&lt;/em&gt; 나 &lt;em&gt;Java&lt;/em&gt; 계열의 언어와는 다르게 &lt;code&gt;score &amp;gt;= 80 &amp;amp;&amp;amp; score &amp;lt; 90&lt;/code&gt; 과 같은 방식으로 표현하지 않고 &lt;code&gt;80 &amp;lt;= score &amp;lt; 90&lt;/code&gt; 과 같은 구문을 지원. 코드를 쓰기에도 쉽고 보기에도 편리함.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;조건식 참/거짓 판별&lt;/h3&gt;
+&lt;p&gt;조건식의 참/거짓은 &lt;code&gt;bool()&lt;/code&gt; 내장함수의 판단방식과 같음. 대략적인 판단은 아래와 같음.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;상수의 값이 0일 경우 거짓인 &lt;code&gt;False&lt;/code&gt;, 0이 아닐 경우 &lt;code&gt;True&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;리스트, 튜플, 딕셔너리가 비어있거나 빈 문자열의 경우 &lt;code&gt;False&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;논리연산자는 왼쪽에서 오른쪽방향으로 진행하여 판단 (좌변을 우선으로 단축평가 가능)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;단축평가(short-circuit evaluation)란 앞부분에서 참이나 거짓임이 자명할 때 조건식 전체를 연산하여 평가하지 않는 것을 의미.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;반복문&lt;/h2&gt;
+&lt;p&gt;파이썬은 당연히 &lt;code&gt;while&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt; 와 같은 반복문이 있음. 조건문과 마찬가지로 여러줄일 경우 들여쓰기로 블록을 지정해야 함. 예시는 아래와 같음.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;while 문&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;print&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;times !!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h3&gt;for 문&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;print&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;times !!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;파이썬에서의 한계&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;for&lt;/code&gt; 문에서 주목할 점은 &lt;code&gt;while&lt;/code&gt; 문과는 다르게 순회 가능한 시퀸스형 자료를 토대로 반복문을 수행한다는 것. 이터레이터(iterator)이기 때문에 수행 중 점프가 힘들다는 단점을 가짐. &lt;code&gt;continue&lt;/code&gt; 혹은 &lt;code&gt;break&lt;/code&gt; 는 가능하나 임의로 수행을 단축시킬 수는 없음. 파이썬의 &lt;code&gt;for&lt;/code&gt; 문은 &lt;em&gt;C&lt;/em&gt; 나 &lt;em&gt;Java&lt;/em&gt; 의 &lt;code&gt;for&lt;/code&gt; 문과는 다름. &lt;code&gt;foreach&lt;/code&gt; 에 가깝다고 봐야함. 이러한 경우엔 &lt;code&gt;while&lt;/code&gt; 문을 사용해야.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;jump!&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="c1"&gt;# iterator 값이 우선이라 index 값으로 반복을 제어할 수 없음.&lt;/span&gt;
+        &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+        &lt;span class="k"&gt;continue&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;numbers.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;### result:&lt;/span&gt;
+&lt;span class="c1"&gt;# 0 jump!&lt;/span&gt;
+&lt;span class="c1"&gt;# 1 numbers.&lt;/span&gt;
+&lt;span class="c1"&gt;# 2 numbers.&lt;/span&gt;
+&lt;span class="c1"&gt;# 3 jump!&lt;/span&gt;
+&lt;span class="c1"&gt;# 4 numbers.&lt;/span&gt;
+&lt;span class="c1"&gt;# 5 numbers.&lt;/span&gt;
+&lt;span class="c1"&gt;# 6 jump!&lt;/span&gt;
+&lt;span class="c1"&gt;# 7 numbers.&lt;/span&gt;
+&lt;span class="c1"&gt;# 8 numbers.&lt;/span&gt;
+&lt;span class="c1"&gt;# 9 jump!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;하지만 &lt;code&gt;foreach&lt;/code&gt; 에 가까우므로 &lt;code&gt;for i in [1,2,3,4,5]:&lt;/code&gt; 와 같은 구문으로 시퀸스형 자료를 이터레이터(iterator)로 사용 가능.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;응용&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;for&lt;/code&gt; 문을 아래와 같이 C 스타일로도 사용 가능.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;APPLE&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;index: {0}, value: {1}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;p&gt;아래와 같이 &lt;code&gt;enumerate()&lt;/code&gt; 내장함수도 이용 가능.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;APPLE&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;p&gt;아래와 같이 조건문을 넣을 수도 있음.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Apple&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Cat&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Banana&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Tea&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;99&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;101&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="c1"&gt;### filter 사용 가능&lt;/span&gt;
+&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;big_money&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;### 아래와 같이 lambda 가능&lt;/span&gt;
+&lt;span class="c1"&gt;# result = filter(lambda m: m &amp;gt; 100, m)&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Big Money: {0}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="c1"&gt;### result: &lt;/span&gt;
+&lt;span class="c1"&gt;# Big Money: 101&lt;/span&gt;
+&lt;span class="c1"&gt;# Big Money: 1000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://docs.python.org/3.4/index.html"&gt;Python Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wikidocs.net/"&gt;Wikidocs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="loop"></category><category term="condition"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="스크립트"></category><category term="언어"></category><category term="반복문"></category><category term="조건문"></category><category term="개발"></category></entry><entry><title>파이썬 패키지 한번에 업그레이드하기</title><link href="https://til.chann.kr/python/upgrade-all-python-packages" rel="alternate"></link><published>2016-04-08T21:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-04-08:python/upgrade-all-python-packages</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/channprj/TIL"&gt;TIL&lt;/a&gt;을 운영하면서 &lt;a href="http://requires.io"&gt;require.io&lt;/a&gt; 서비스의 뱃지가 &lt;em&gt;outdated&lt;/em&gt; 라는 영롱한 글자와 함께 노란불이 들어와 있는 것이 영 거슬렸음.&lt;/p&gt;
 &lt;p&gt;여러가지 방법이 있지만 요약하면 대개 아래와 같음.&lt;/p&gt;
@@ -88,7 +206,7 @@
 &lt;h2&gt;후기&lt;/h2&gt;
 &lt;p&gt;Github 저장소 페이지에서 보기 좋게 하기 위해 master 브랜치에서는 오로지 MD 문서만 정리를 하였음. generator 브랜치에서 master 수정 내역을 불러와서 Pelican 으로 Publish 한 다음, gh-pages 브랜치로 Publish 결과를 다시 푸시함.&lt;/p&gt;
 &lt;p&gt;결과적으로, 저장소를 이중화 했을 때보단 겉보기엔 깔끔해보이나 commit log 를 볼 땐 지저분해 보일 수 밖에 없음. Git-Flow 라던가 Github-Flow 에 맞지 않은 브랜치 전략이지만 일단은 이대로 계속 운영해 볼 생각.&lt;/p&gt;
-&lt;p&gt;Git 의 Submodule 이나 Subtree 를 좀 더 자유자재로 사용 가능해지면 좀 더 깔끔하고 어썸한 방법으로 구조를 바꿀 생각.&lt;/p&gt;</summary><category term="ci"></category><category term="travis-ci"></category><category term="dev"></category><category term="scrpit"></category><category term="yaml"></category><category term="til"></category></entry><entry><title>파이썬 코딩 컨벤션</title><link href="https://til.chann.kr/python/python-coding-convention" rel="alternate"></link><published>2016-03-11T14:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-03-11:python/python-coding-convention</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;p&gt;Git 의 Submodule 이나 Subtree 를 좀 더 자유자재로 사용 가능해지면 좀 더 깔끔하고 어썸한 방법으로 구조를 바꿀 생각.&lt;/p&gt;</summary><category term="ci"></category><category term="travis-ci"></category><category term="dev"></category><category term="scrpit"></category><category term="yaml"></category><category term="til"></category></entry><entry><title>파이썬 코딩 컨벤션</title><link href="https://til.chann.kr/python/coding-convention" rel="alternate"></link><published>2016-03-11T14:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-03-11:python/coding-convention</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;img alt="Imgur" src="https://i.imgur.com/P58yvJI.png" /&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Coding_conventions"&gt;코딩 컨벤션(Coding convention)&lt;/a&gt;이란 읽고, 관리하기 쉬운 코드를 작성하기 위한 일종의 코딩 스타일 규약(약속)임.&lt;/p&gt;
@@ -218,7 +336,17 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 &lt;li&gt;&lt;a href="http://www.gamedevforever.com/116"&gt;포프님 블로그&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://code.google.com/p/soc/wiki/PythonStyleGuide"&gt;melange 스타일 가이드&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ukupat.github.io/tabs-or-spaces/"&gt;ukupat의 Tab or Space&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="study"></category><category term="coding style"></category><category term="coding convension"></category><category term="coding standard"></category></entry><entry><title>Pelican 문서 작성법</title><link href="https://til.chann.kr/pelican/how-to-write-pelican-docs" rel="alternate"></link><published>2016-02-27T18:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-27:pelican/how-to-write-pelican-docs</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="study"></category><category term="coding style"></category><category term="coding convension"></category><category term="coding standard"></category></entry><entry><title>파이썬 기본 함수들</title><link href="https://til.chann.kr/python/base-function" rel="alternate"></link><published>2016-02-27T18:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-27:python/base-function</id><summary type="html">&lt;!--Summary: --&gt;
+
+&lt;h2&gt;입출력&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;작성중&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wikidocs.net"&gt;Wikidocs&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="개발"></category><category term="스크립트"></category><category term="함수"></category><category term="공부"></category><category term="스터디"></category><category term="study"></category></entry><entry><title>Pelican 문서 작성법</title><link href="https://til.chann.kr/pelican/how-to-write-pelican-docs" rel="alternate"></link><published>2016-02-27T18:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-27:pelican/how-to-write-pelican-docs</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;p&gt;개인적으로 &lt;code&gt;.rst&lt;/code&gt; &lt;a href="https://en.wikipedia.org/wiki/ReStructuredText"&gt;(reStructuredText)&lt;/a&gt; 방식의 문서를 선호하지 않으므로, 이 글에서는 &lt;code&gt;.md&lt;/code&gt; &lt;a href="https://nolboo.github.io/blog/2013/09/07/john-gruber-markdown/"&gt;(Markdown)&lt;/a&gt; 방식의 문서를 작성하는 법을 다룰 예정.&lt;/p&gt;
 &lt;h2&gt;기본 틀&lt;/h2&gt;
@@ -272,17 +400,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 &lt;li&gt;&lt;a href="http://docs.getpelican.com/en"&gt;Pelican Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://nolboo.github.io/blog/2013/09/07/john-gruber-markdown/"&gt;존 그루버 마크다운 페이지 번역&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/ReStructuredText"&gt;rst Wikipedia&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="python"></category><category term="pelican"></category><category term="static site generator"></category><category term="파이썬"></category><category term="펠리칸"></category><category term="정적 페이지 생성기"></category><category term="블로그"></category><category term="blog"></category><category term="github pages"></category><category term="markdown"></category><category term="마크다운"></category><category term="writing"></category><category term="글쓰기"></category></entry><entry><title>파이썬 기본 함수들</title><link href="https://til.chann.kr/python/python-base-function" rel="alternate"></link><published>2016-02-27T18:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-27:python/python-base-function</id><summary type="html">&lt;!--Summary: --&gt;
-
-&lt;h2&gt;입출력&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;참고&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://wikidocs.net"&gt;Wikidocs&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="개발"></category><category term="스크립트"></category><category term="함수"></category><category term="공부"></category><category term="스터디"></category><category term="study"></category></entry><entry><title>서버 재부팅 시 서비스 자동 실행 쉘스크립트</title><link href="https://til.chann.kr/shell/upstart-service-shell-script" rel="alternate"></link><published>2016-02-16T22:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-16:shell/upstart-service-shell-script</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="pelican"></category><category term="static site generator"></category><category term="파이썬"></category><category term="펠리칸"></category><category term="정적 페이지 생성기"></category><category term="블로그"></category><category term="blog"></category><category term="github pages"></category><category term="markdown"></category><category term="마크다운"></category><category term="writing"></category><category term="글쓰기"></category></entry><entry><title>서버 재부팅 시 서비스 자동 실행 쉘스크립트</title><link href="https://til.chann.kr/shell/upstart-service-shell-script" rel="alternate"></link><published>2016-02-16T22:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-16:shell/upstart-service-shell-script</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Ubuntu Linux 기준으로 작성함.&lt;/p&gt;
@@ -408,7 +526,7 @@ Canvas는 단일 엘리먼트라 상대적으로 속도가 빠를 수 밖에 없
 &lt;li&gt;raphaelJS&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;SVG as a markup&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;img src="#" /&amp;gt;&lt;/code&gt; ...&lt;/p&gt;</summary><category term="study"></category><category term="programming"></category><category term="dev"></category><category term="js"></category><category term="javascript"></category><category term="canvas"></category><category term="svg"></category><category term="자바스크립트"></category><category term="ECMAScript"></category><category term="ES6"></category></entry><entry><title>파이썬 함수</title><link href="https://til.chann.kr/python/python-function" rel="alternate"></link><published>2016-02-08T13:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-08:python/python-function</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;svg&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;img src="#" /&amp;gt;&lt;/code&gt; ...&lt;/p&gt;</summary><category term="study"></category><category term="programming"></category><category term="dev"></category><category term="js"></category><category term="javascript"></category><category term="canvas"></category><category term="svg"></category><category term="자바스크립트"></category><category term="ECMAScript"></category><category term="ES6"></category></entry><entry><title>파이썬 함수</title><link href="https://til.chann.kr/python/function" rel="alternate"></link><published>2016-02-08T13:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-02-08:python/function</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;h2&gt;파이썬 함수 개념&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -965,7 +1083,7 @@ $ bower info bootstrap  &lt;span class="c1"&gt;# bootstrap의 버전 정보 확�
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="http://bower.io"&gt;Bower 공식 홈페이지&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/bower/bower"&gt;Bower 저장소&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="dev"></category><category term="bower"></category><category term="package manager"></category><category term="tool"></category></entry><entry><title>파이썬 기초</title><link href="https://til.chann.kr/python/python-variable-operator" rel="alternate"></link><published>2016-01-04T20:12:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-01-04:python/python-variable-operator</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;/ol&gt;</summary><category term="dev"></category><category term="bower"></category><category term="package manager"></category><category term="tool"></category></entry><entry><title>파이썬 기초</title><link href="https://til.chann.kr/python/variable-operator" rel="alternate"></link><published>2016-01-04T20:12:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-01-04:python/variable-operator</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;작성중&lt;/p&gt;
