@@ -681,7 +681,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 &lt;li&gt;&lt;a href="https://udacity.com"&gt;Udacity&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://legacy-wiki.dgoon.net/doku.php?id=python:decorator"&gt;dgoon Wiki&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://python-3-patterns-idioms-test.readthedocs.org/en/latest/PythonDecorators.html"&gt;Python 3 Patterns Idioms&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="개발"></category><category term="스크립트"></category><category term="함수"></category><category term="공부"></category><category term="스터디"></category><category term="study"></category></entry><entry><title>파이썬 기초</title><link href="https://til.chann.kr/python/variable-operator" rel="alternate"></link><published>2016-01-04T20:12:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-01-04:python/variable-operator</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="개발"></category><category term="스크립트"></category><category term="함수"></category><category term="공부"></category><category term="스터디"></category><category term="study"></category></entry><entry><title>파이썬 기초</title><link href="https://til.chann.kr/python/fundamental" rel="alternate"></link><published>2016-01-04T20:12:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-01-04:python/fundamental</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;작성중&lt;/p&gt;
@@ -710,18 +710,27 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 &lt;hr /&gt;
 &lt;h2&gt;설치법&lt;/h2&gt;
 &lt;h3&gt;윈도우&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt;에서 파이썬을 다운로드 받아서 설치.&lt;/p&gt;
+&lt;p&gt;설치 후 Python Interpreter 프로그램을 실행하여 아래와 같이 인터프리터의 위치를 파악한 후, 주로 사용하는 IDE 나 에디터 설정에서 인터프리터 위치를 잡아주면 됨. PyCharm 기준으로는 인터프리터 설정에서 Python.exe 파일을 선택하면 나머진 알아서 다 잡아줌.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;CHANN&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;AppData&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Local&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Programs&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python35-32&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;python35.zip&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;CHANN&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;AppData&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Local&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Programs&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python35-32&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;DLLs&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;CHANN&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;AppData&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Local&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Programs&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python35-32&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;lib&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;CHANN&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;AppData&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Local&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Programs&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python35-32&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;C:&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Users&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;CHANN&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;AppData&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Local&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Programs&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;Python35-32&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;lib&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s1"&gt;site-packages&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;자세한 사항은 &lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;맥&lt;/h3&gt;
-&lt;p&gt;맥에는 기본적으로 2.7.10이 내장되어 있다. 가급적 3.x 이상의 버전을 사용하라고 권고하고 있으니 따로 설치만 해주면 된다.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
+&lt;p&gt;맥에는 기본적으로 2.7.10이 내장되어 있다. 가급적 3.x 이상의 버전을 사용하라고 권고하고 있으니 따로 설치만 해주면 됨. 다른 버전을 설치하고 싶다면 &lt;a href="http://brew.sh/"&gt;Brew&lt;/a&gt; 를 사용해서 &lt;code&gt;brew install python3&lt;/code&gt;, &lt;code&gt;brew install pyenv&lt;/code&gt; 등을 설치하면 됨.&lt;/p&gt;
+&lt;p&gt;자세한 사항은 &lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;리눅스&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;yum&lt;/code&gt; 등 별도의 패키지 관리도구를 이용해서 설치하면 된다.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
+&lt;p&gt;자세한 사항은 &lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;변수명&lt;/h2&gt;
-&lt;p&gt;변수명은 문자, 숫자, 언더바(_)를 포함 가능하지만 숫자가 먼저 올 수 없다.&lt;/p&gt;
+&lt;p&gt;변수명은 문자, 숫자, 언더바(_)를 포함 가능하지만 숫자가 먼저 올 수 없음.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Python&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;python_var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
@@ -730,7 +739,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;사전에 기능과 의미가 정의된 파이썬 키워드는 변수명으로 사용할 수 없다.&lt;/p&gt;
+&lt;p&gt;사전에 기능과 의미가 정의된 파이썬 키워드는 변수명으로 사용할 수 없음.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;keyword&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;keyword&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;kwlist&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;False&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;None&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;True&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;and&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;as&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;assert&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;break&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;continue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;def&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;del&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;elif&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;else&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;except&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;finally&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;for&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;from&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;global&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;if&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;import&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;in&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;is&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;lambda&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nonlocal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;not&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;or&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pass&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;raise&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;return&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;try&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;while&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;with&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yield&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -739,7 +748,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 
 &lt;hr /&gt;
 &lt;h2&gt;문자열&lt;/h2&gt;
-&lt;p&gt;반드시 큰따옴표("")나 작은따옴표('')로 감싸야 한다.&lt;/p&gt;
+&lt;p&gt;반드시 큰따옴표("")나 작은따옴표('')로 감싸야.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;str&amp;#39;&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;str&amp;quot;&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;This is &amp;#39;str&amp;#39;&amp;quot;&lt;/span&gt;
@@ -754,7 +763,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;이스케이프 문자는 C와 유사하다.&lt;/p&gt;
+&lt;p&gt;이스케이프 문자는 C와 유사.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;\n&lt;/code&gt;  : 줄바꿈&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\t&lt;/code&gt;  : 탭&lt;/li&gt;
@@ -772,7 +781,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;문자열을 다루는 것도 쉽다. 잘라 쓰기 쉽고 붙이기는 더 쉽다. 자동으로 배열처럼 인덱싱도 된다. 인덱스를 이용하여 문자열의 특정 문자를 다른 문자로 변경할 수는 없으나 문자열 전체를 변경하는 것은 가능하다.&lt;/p&gt;
+&lt;p&gt;문자열을 다루는 것도 쉬움. 잘라 쓰기 쉽고 붙이기는 더 쉬움. 자동으로 배열처럼 인덱싱도 됨. 인덱스를 이용하여 문자열의 특정 문자를 다른 문자로 변경할 수는 없으나 문자열 전체를 변경하는 것은 가능.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;파이&amp;#39;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;썬&amp;#39;&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;#39;파이썬&amp;#39;&lt;/span&gt;
 
@@ -802,7 +811,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 
 &lt;hr /&gt;
 &lt;h2&gt;리스트&lt;/h2&gt;
-&lt;p&gt;파이썬에서의 리스트는 값의 나열이라 순서가 있으며 여러 종류의 값을 담을 수 있다. 인덱스는 0부터 시작하며 슬라이싱도 가능하다.&lt;/p&gt;
+&lt;p&gt;파이썬에서의 리스트는 값의 나열이라 순서가 있으며 여러 종류의 값을 담을 수 있음. 인덱스는 0부터 시작하며 슬라이싱도 가능.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 배열의 선언&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;food&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;rice&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;cheese&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;apple&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
@@ -855,7 +864,7 @@ To be consistent with surrounding code that also breaks it (maybe for historic r
 
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;기본적으로 리스트 아이템을 삭제하는 건 크게 2가지 방법이 있다.&lt;/p&gt;
+&lt;p&gt;기본적으로 리스트 아이템을 삭제하는 건 크게 2가지 방법이 있음.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pop() : 뒤에서부터 값을 빼내옴.&lt;/li&gt;
 &lt;li&gt;remove()  : 위치에 상관없이 리스트 아이템 삭제.&lt;/li&gt;
@@ -1065,5 +1074,5 @@ False
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;파이썬에서는 함수도 객체다. &lt;code&gt;def&lt;/code&gt; 는 함수를 만드는 구문이다. Test 라는 이름은 생성된 함수 객체를 참조하는 레퍼런스다. 메모리 어딘가에 함수 객체가 생성되는 것이고, 객체이기 때문에 생성할 때마다 다른 주소값을 가진다.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;return&lt;/code&gt;에서는 함수를 종료하고, 해당 함수를 호출한 곳으로 다시 되돌아간다. 객체를 되돌려준다. &lt;code&gt;return&lt;/code&gt;을 적지 않아도, &lt;code&gt;return&lt;/code&gt;만 적어도 종료되며, 이때 반환값은 None이다.&lt;/p&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category></entry></feed>
+&lt;p&gt;파이썬에서는 함수도 객체. &lt;code&gt;def&lt;/code&gt; 는 함수를 만드는 구문. 위의 코드에서 Test 라는 이름은 생성된 함수 객체를 참조하는 레퍼런스. 메모리 어딘가에 함수 객체가 생성되는 것이고, 객체이기 때문에 생성할 때마다 다른 주소값을 가짐.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;return&lt;/code&gt;에서는 객체를 되돌려주며 함수를 종료하고, 해당 함수를 호출한 곳으로 다시 되돌아감. &lt;code&gt;return&lt;/code&gt; 은 함수를 종료하는 구문인데, 굳이 적지 않아도 묵시적으로 &lt;code&gt;return&lt;/code&gt; 을 적어줌. 반환값을 따로 적지 않으면 None 을 리턴함.&lt;/p&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category></entry></feed>
