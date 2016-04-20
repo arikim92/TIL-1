@@ -12,8 +12,8 @@
 <link rel="canonical" href="https://til.chann.kr/shell/upstart-service-shell-script">
 
         <meta name="author" content="CHANN" />
-        <meta name="keywords" content="shell,terminal,cli,sh,init,init.d,ubuntu,upstart" />
-        <meta name="description" content="Ubuntu Linux 기준으로 작성함. init 파일 생성 /etc/init.d 에 example 생성 후 아래와 같이 설정하자. $ chmod 755 example $ chown root:root example 쉘 스크립트 example 의 코드는 아래와 같이 작성 가능하다. #!/bin/sh ### BEGIN INIT INFO # Provides: blog # Required-Start: # Required-Stop: # Default-Start: 2 3 4 5 # Default-Stop: 0 1 ..." />
+        <meta name="keywords" content="shell,terminal,cli,sh,init,init.d,ubuntu,upstart,script,쉘,스크립트. 터미널" />
+        <meta name="description" content="Ubuntu Linux 기준으로 작성함. init 파일 생성 /etc/init.d 에 example 생성 후 아래와 같이 설정. $ chmod 755 example $ chown root:root example 쉘 스크립트 example 의 코드는 아래와 같이 작성 가능. #!/bin/sh ### BEGIN INIT INFO # Provides: blog # Required-Start: # Required-Stop: # Default-Start: 2 3 4 5 # Default-Stop: 0 1 ..." />
 
 	<!-- CSS Components -->
 	<link rel="stylesheet" type="text/css" href="https://til.chann.kr/theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
@@ -108,6 +108,12 @@ Today I Learned			</a>
 	<a href="https://til.chann.kr/tag/ubuntu">ubuntu</a>
         /
 	<a href="https://til.chann.kr/tag/upstart">upstart</a>
+        /
+	<a href="https://til.chann.kr/tag/script">script</a>
+        /
+	<a href="https://til.chann.kr/tag/swel">쉘</a>
+        /
+	<a href="https://til.chann.kr/tag/seukeuribteu-teomineol">스크립트. 터미널</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -117,14 +123,14 @@ Today I Learned			</a>
 <p>Ubuntu Linux 기준으로 작성함.</p>
 </blockquote>
 <h2>init 파일 생성</h2>
-<p><code>/etc/init.d</code> 에 example 생성 후 아래와 같이 설정하자.</p>
+<p><code>/etc/init.d</code> 에 example 생성 후 아래와 같이 설정.</p>
 <div class="highlight"><pre><span></span>$ chmod <span class="m">755</span> example
 $ chown root:root example
 </pre></div>
 
 
 <h2>쉘 스크립트</h2>
-<p><code>example</code> 의 코드는 아래와 같이 작성 가능하다.</p>
+<p><code>example</code> 의 코드는 아래와 같이 작성 가능.</p>
 <div class="highlight"><pre><span></span><span class="ch">#!/bin/sh</span>
 
 <span class="c1">### BEGIN INIT INFO</span>
@@ -163,9 +169,9 @@ start<span class="o">()</span> <span class="o">{</span>
 </pre></div>
 
 
-<p>위의 주석처리 된 부분에서 <code>runlevel</code>을 2, 3, 4, 5라고 명시한 것(Default-Start)은 싱글유저 모드 이외엔 자동 시작하겠다는 의미이다. 위의 스크립트는 굉장히 간단하니 기타 응용 방법은 <code>/etc/init.d/</code> 의 다른 스크립트들을 보고 참고하자.</p>
+<p>위의 주석처리 된 부분에서 <code>runlevel</code>을 2, 3, 4, 5라고 명시한 것(Default-Start)은 싱글유저 모드 이외엔 자동 시작하겠다는 의미. 위의 스크립트는 굉장히 간단하니 기타 응용 방법은 <code>/etc/init.d/</code> 의 다른 스크립트들을 보고 참고.</p>
 <h2>심볼릭 링크 추가</h2>
-<p>쉘스크립트 작성이 끝났으면 아래와 같이 심볼릭 링크를 추가해주자. rc는 다목적 시동 스크립트를 의미한다. upstart init은 우분투 6.10 때부터 도입되었다.</p>
+<p>쉘스크립트 작성이 끝났으면 아래와 같이 심볼릭 링크를 추가하자. rc(run command)는 다목적 시동 스크립트를 의미한다. upstart init은 우분투 6.10 때부터 도입됨.</p>
 <div class="highlight"><pre><span></span>$ update-rc.d ghost defaults
 $ update-rc.d ghost <span class="nb">enable</span>
 </pre></div>
