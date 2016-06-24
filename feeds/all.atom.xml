@@ -79,7 +79,41 @@
 &lt;h2&gt;참고&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://wikidocs.net/29"&gt;Wikidocs - Module&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="study"></category><category term="module"></category><category term="oop"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="개발"></category><category term="스크립트"></category><category term="함수"></category><category term="공부"></category><category term="스터디"></category><category term="모듈"></category><category term="객체지향"></category></entry><entry><title>파이썬 클래스</title><link href="https://til.chann.kr/python/class" rel="alternate"></link><published>2016-04-25T21:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-04-25:python/class</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;/ol&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category><category term="function"></category><category term="study"></category><category term="module"></category><category term="oop"></category><category term="파이썬"></category><category term="프로그래밍"></category><category term="개발"></category><category term="스크립트"></category><category term="함수"></category><category term="공부"></category><category term="스터디"></category><category term="모듈"></category><category term="객체지향"></category></entry><entry><title>zsh 소유권 문제 해결</title><link href="https://til.chann.kr/shell/zsh-ownership-issue-fix" rel="alternate"></link><published>2016-06-04T20:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-06-04:shell/zsh-ownership-issue-fix</id><summary type="html">&lt;!--Summary: --&gt;
+
+&lt;p&gt;가끔 터미널로 작업하다 보면 아래와 같은 상황을 직면한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Welcome to Ubuntu 14.04.3 LTS &lt;span class="o"&gt;(&lt;/span&gt;GNU/Linux 3.13.0-66-generic x86_64&lt;span class="o"&gt;)&lt;/span&gt;
+
+ * Documentation:  https://help.ubuntu.com/
+Last login: Sat Oct &lt;span class="m"&gt;31&lt;/span&gt; 15:15:36 &lt;span class="m"&gt;2015&lt;/span&gt; from 203.229.151.243
+zsh compinit: insecure directories, run compaudit &lt;span class="k"&gt;for&lt;/span&gt; list.
+Ignore insecure directories and &lt;span class="k"&gt;continue&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;y&lt;span class="o"&gt;]&lt;/span&gt; or abort compinit &lt;span class="o"&gt;[&lt;/span&gt;n&lt;span class="o"&gt;]&lt;/span&gt;?
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;이러한 상황의 문제점은 대부분 zshell과 관련된 소유권과 권한의 문제일 가능성이 큼. 특정 패키지나 라이브러리 등을 설치할 때 외부의 스크립트를 사용할 경우, 가끔 &lt;code&gt;/usr/local/share/&lt;/code&gt; 의 소유권과 권한을 변경해버리기 때문.&lt;/p&gt;
+&lt;p&gt;아래의 두 가지 방법이 있음. zshell을 사용하는 OS X, Linux 모두 적용 가능.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;site-functions 의 소유권 문제일 경우&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; /usr/local/share/zsh
+$ sudo chown -R root:root ./site-functions
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h2&gt;zsh 권한과 소유권 문제일 경우&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;cd&lt;/span&gt; /usr/local/share/
+$ sudo chmod -R &lt;span class="m"&gt;755&lt;/span&gt; zsh
+$ sudo chown -R root:staff zsh
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://www.zsh.org/mla/users/2012/msg00062.html"&gt;Zsh.org의 글&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Homebrew/homebrew/issues/7801#issuecomment-2187273"&gt;Homebrew의 이슈&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="zsh"></category><category term="shell"></category><category term="terminal"></category><category term="cli"></category><category term="sh"></category><category term="ohmyzsh"></category><category term="bug"></category><category term="issue"></category><category term="fix"></category><category term="터미널"></category><category term="쉘"></category><category term="권한"></category><category term="문제해결"></category></entry><entry><title>파이썬 클래스</title><link href="https://til.chann.kr/python/class" rel="alternate"></link><published>2016-04-25T21:00:00+09:00</published><author><name>CHANN</name></author><id>tag:til.chann.kr,2016-04-25:python/class</id><summary type="html">&lt;!--Summary: --&gt;
 
 &lt;p&gt;파이썬은 객체지향 언어이기에 클래스를 사용을 권장함. 클래스는 좀 더 효율적이고 간결하게 기능을 구현하기 위해 존재. 클래스는 &lt;a href="https://ko.wikipedia.org/wiki/객체_지향_프로그래밍"&gt;객체지향 프로그래밍 언어&lt;/a&gt;에서 주로 사용하는 개념. 상속(Inheritance), 다형성(Polymorphism), 캡슐화(Encapsulation) 또는 정보은닉(Information Hiding)의 개념을 알아야 함.&lt;/p&gt;
 &lt;h2&gt;선언&lt;/h2&gt;
